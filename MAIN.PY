@@ -73,8 +73,9 @@ def analyze_and_convert(image, user_question):
     
     # Generate the response
     response = chain.run(input_documents=embeddings_result["match"], question=user_question)
-    
-    result = f"User Question: {user_question}\n\n"
+
+    result = f"Extracted_text: {text}\n\n"
+    result += f"User Question: {user_question}\n\n"
     result += "Analysis Result:\n"
     result += f"{response}\n"
     return result
