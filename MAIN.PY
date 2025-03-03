@@ -28,7 +28,7 @@ def analyze_text_in_image(image) -> str:
                 {
                     'role': 'user',
                     'content': '''Analyze this image.
-                    Image contains text, extract all text
+                    Image contains text, extractall text
                     and return text in the image.''',
                     'images': [image_base64],
                 },
