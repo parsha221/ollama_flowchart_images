@@ -5,6 +5,11 @@ import gradio as gr
 import base64
 from io import BytesIO
 from PIL import Image
+from langchain.vectorstores import Chroma
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_ollama import OllamaLLM, OllamaEmbeddings
+from langchain.chains.question_answering import load_qa_chain
+
 
 class Block(BaseModel):
     summarised_data: str
